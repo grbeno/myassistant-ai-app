@@ -162,12 +162,12 @@ STATIC_ROOT = str(BASE_DIR.joinpath('build', 'staticfiles'))
 
 STATICFILES_DIRS = [ str(BASE_DIR.joinpath('build', 'static'))  ]
 
-STATICFILES_FINDERS = [
-  "django.contrib.staticfiles.finders.FileSystemFinder",
-  "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-]
+# STATICFILES_FINDERS = [
+#   "django.contrib.staticfiles.finders.FileSystemFinder",
+#   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+# ]
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage' #'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type

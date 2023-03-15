@@ -40,13 +40,13 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'myassistant-ai-app.herokuapp.com' ]
 # Application definition
 
 INSTALLED_APPS = [
-    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'whitenoise.runserver_nostatic',
     
     'rest_framework',
     'corsheaders',
@@ -165,12 +165,12 @@ STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'build/static'), ]  #[ str(BASE_DIR.
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
 
-# STATICFILES_FINDERS = [
-#   "django.contrib.staticfiles.finders.FileSystemFinder",
-#   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-# ]
+STATICFILES_FINDERS = [
+  "django.contrib.staticfiles.finders.FileSystemFinder",
+  "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
-# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 
 
 # Default primary key field type

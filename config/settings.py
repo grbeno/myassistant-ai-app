@@ -167,7 +167,7 @@ STATICFILES_FINDERS = [
   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage' #'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type

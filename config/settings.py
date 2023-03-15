@@ -14,7 +14,7 @@ import os
 from pathlib import Path
 import dj_database_url
 from environs import Env
-import django_heroku
+#import django_heroku
 
 env = Env()
 env.read_env()
@@ -163,14 +163,14 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'build/static'), ]  #[ str(BASE_DIR.joinpath('build', 'static'))  ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
 
-STATICFILES_FINDERS = [
-  "django.contrib.staticfiles.finders.FileSystemFinder",
-  "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-]
+# STATICFILES_FINDERS = [
+#   "django.contrib.staticfiles.finders.FileSystemFinder",
+#   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+# ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
@@ -178,4 +178,4 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())

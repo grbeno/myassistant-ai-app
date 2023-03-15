@@ -1,5 +1,0 @@
-[phases.setup]
-nixPkgs = ["...", "python310", "postgresql", "pipenv", "gcc"] # <- nodejs-16_x, npm-8_x
-
-[start]
-cmd = "gunicorn config.wsgi --log-file - && python manage.py migrate && npm run build"

@@ -1,0 +1,2 @@
+[phases.setup]
+nixPkgs = ["...", "python310", "postgresql", "pipenv", "gcc"] # <- nodejs-16_x, npm-8_x

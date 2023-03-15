@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
+import os
 from pathlib import Path
 import dj_database_url
 from environs import Env
@@ -159,13 +160,15 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATIC_ROOT = str(BASE_DIR.joinpath('build', 'staticfiles'))
+if not os.path.isdir(STATIC_ROOT):
+    os.makedirs(STATIC_ROOT, mode=0o755)
 
 STATICFILES_DIRS = [ str(BASE_DIR.joinpath('build', 'static'))  ]
 
-# STATICFILES_FINDERS = [
-#   "django.contrib.staticfiles.finders.FileSystemFinder",
-#   "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-# ]
+STATICFILES_FINDERS = [
+  "django.contrib.staticfiles.finders.FileSystemFinder",
+  "django.contrib.staticfiles.finders.AppDirectoriesFinder",
+]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 

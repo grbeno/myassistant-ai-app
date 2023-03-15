@@ -163,7 +163,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [ os.path.join(BASE_DIR, 'build/static') ]  #[ str(BASE_DIR.joinpath('build', 'static'))  ]
 print(STATICFILES_DIRS)
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
+STATIC_ROOT = os.path.join(BASE_DIR, 'build/staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
 print(STATIC_ROOT)
 
 STATICFILES_FINDERS = [

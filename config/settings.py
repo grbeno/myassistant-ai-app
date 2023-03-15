@@ -162,7 +162,7 @@ USE_TZ = True
 STATIC_URL = '/static/'
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'build/static'), )  #[ str(BASE_DIR.joinpath('build', 'static'))  ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'build/staticfiles')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
+#STATIC_ROOT = os.path.join(BASE_DIR, 'build/static')  #str(BASE_DIR.joinpath('build', 'staticfiles'))
 
 STATICFILES_FINDERS = [
   "django.contrib.staticfiles.finders.FileSystemFinder",

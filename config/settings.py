@@ -34,7 +34,7 @@ SECRET_KEY = env.str('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'myassistant-ai-app.herokuapp.com' ]
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'myassistant-ai-app.herokuapp.com', 'myassistant-ai.up.railway.app' ]
 
 
 # Application definition
@@ -177,5 +177,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedStaticFilesStorage'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = ['https://myassistant-ai-app.herokuapp.com', 'https://myassistant-ai.up.railway.app'] # railway
 
 #django_heroku.settings(locals())

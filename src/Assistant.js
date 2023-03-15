@@ -130,7 +130,7 @@ class Assistant extends Component {
                     </div>
                 </div>
             ))}
-                </div>
+            </div>
         );
     }
 }

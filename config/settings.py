@@ -40,12 +40,12 @@ ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'myassistant-ai-app.herokuapp.com' ]
 # Application definition
 
 INSTALLED_APPS = [
+    'whitenoise.runserver_nostatic',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
-    'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
     
     'rest_framework',
